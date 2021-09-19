@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+
+@import "~@ng-select/ng-select/themes/default.theme.css";
+body {
     background-color: #eceff1;
+    text-align: inherit !important;
+    direction: rtl;
 }
-a{
+
+a {
     color: #fff;
 }
+
 a:hover {
-    
     text-decoration: none !important;
 }

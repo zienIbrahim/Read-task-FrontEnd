@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 import { map } from 'rxjs/operators';
@@ -15,7 +16,7 @@ import { map } from 'rxjs/operators';
 
 export class AuthService 
 {
-  constructor(private http : HttpClient,private jwtHelper: JwtHelperService) { }
+  constructor(private http : HttpClient,private jwtHelper: JwtHelperService, public router: Router) { }
 
 
 
@@ -33,7 +34,10 @@ export class AuthService
       {
         const user = Response;
 
-        if(user){localStorage.setItem('token' , user.token);}
+        if(user){
+          localStorage.setItem('token' , user.token);
+          this.router.navigate(['home']);
+        }
 
       })
 
