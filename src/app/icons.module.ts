@@ -21,7 +21,7 @@ import {
    faTimes,
    faTrash, faUser,
    faUserCheck,
-   faUserCog,faEdit, faDownload, faPrint, faSyncAlt, faPencilAlt, faBlog,
+   faUserCog,faEdit, faDownload, faPrint, faSyncAlt, faPencilAlt, faBlog,faCartPlus
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -86,7 +86,7 @@ export class IconsModule {
          faRedo,
          faMoneyCheckAlt,faEdit,faDownload,faPencilAlt,faFacebook,faUser,faBlog,faSignOutAlt,
          faPrint,faHome,
-         faSyncAlt
+         faSyncAlt,faCartPlus
       );
    }
 }

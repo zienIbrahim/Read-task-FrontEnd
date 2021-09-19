@@ -1,51 +1,13 @@
-<div class="container" id="container" [class.right-panel-active]="isLogin">
-    <div class="form-container sign-up-container">
-        <form action="#">
-            <h1>Create Account</h1>
-            <div class="social-container">
-                <!-- <a  class="social">  <fa-icon icon="download" class="icon" size="2x"></fa-icon></a>
-            <a  class="social"> <fa-icon icon="download" class="icon" size="2x"></fa-icon></a>
-            <a  class="social"> <fa-icon icon="download" class="icon" size="2x"></fa-icon></a> -->
-            </div>
-            <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>Sign Up</button>
-        </form>
-    </div>
-    <div class="form-container sign-in-container">
-        <form action="#">
+<div class="containar">
+    <div class="row d-flex justify-content-center">
+        <form [formGroup]="loginForm">
             <h1>Sign in</h1>
-            <div class="social-container">
-                <!-- <a  class="social">  <fa-icon icon="download" class="icon" size="2x"></fa-icon></a>
-          <a  class="social"> <fa-icon icon="download" class="icon" size="2x"></fa-icon></a>
-          <a  class="social"> <fa-icon icon="download" class="icon" size="2x"></fa-icon></a> -->
+            <input type="text" placeholder="User Name" formControlName="UserName" />
 
-                <!-- <a  class="social">  <fa-icon icon="linkedin" class="icon"></fa-icon></a>
-          <a  class="social">  <fa-icon icon="download" class="icon"></fa-icon></a>
-          <a  class="social"> <fa-icon icon="facebook-square" class="icon"></fa-icon></a>
-          <a  class="social"> <fa-icon icon="twitter-square" class="icon"></fa-icon></a> -->
-            </div>
-            <span>or use your account</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" formControlName="Password" />
+
             <a href="#">Forgot your password?</a>
-            <button> Sign In</button>
+            <button (click)="login()"> Sign In</button>
         </form>
-    </div>
-    <div class="overlay-container">
-        <div class="overlay">
-            <div class="overlay-panel overlay-left">
-                <h1>Welcome Back!</h1>
-                <p>To keep connected with us please login with your personal info</p>
-                <button class="ghost" id="signIn" (click)="switchLogin()">Sign In</button>
-            </div>
-            <div class="overlay-panel overlay-right">
-                <h1>Hello, Friend!</h1>
-                <p>Enter your personal details and start journey with us</p>
-                <button class="ghost" id="signUp" (click)="switchLogin()">Sign Up</button>
-            </div>
-        </div>
     </div>
 </div>
